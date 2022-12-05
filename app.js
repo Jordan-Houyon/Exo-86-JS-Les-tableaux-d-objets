@@ -39,3 +39,13 @@ for (let i = 0; i < voitures.collection.length; i++) {
     voitures.collection[i].ouvrirPorte();
 }
 
+para = document.createElement("p");
+document.body.append(para);
+
+for (let i = 0; i < voitures.collection.length; i++) {
+    let carColor = document.createElement("span");
+    carColor.innerText = voitures.collection[i].color; //<span>blue</span>
+    console.log(carColor);
+    para.innerText += carColor;
+    //FIXME Ajouter les span AVEC la balise.
+}
